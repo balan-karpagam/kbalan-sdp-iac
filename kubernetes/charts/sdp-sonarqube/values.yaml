@@ -103,4 +103,4 @@ postgresql:
 podLabels: {}
 
 jenkins:
-  masterNamespace: iac-testing
+  masterNamespace: default
