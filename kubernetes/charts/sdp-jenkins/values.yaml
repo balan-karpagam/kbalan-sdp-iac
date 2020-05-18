@@ -296,7 +296,7 @@ master:
   overwriteJobs: false
   affinty: 
   ingress:
-    enabled: false
+    enabled: true
     apiVersion: "extensions/v1beta1"
     labels: {}
     annotations: {}
@@ -315,7 +315,7 @@ master:
     spec: {}
 
   route:
-    enabled: true
+    enabled: false
     labels: {}
     annotations: {}
     path: "jenkins.sdp.com"

@@ -31,14 +31,14 @@ service:
   - 0.0.0.0/0
 
 route:
-  enabled: true
+  enabled: false
   labels: {}
   annotations: {}
   path: "sonarqube.sdp.com"
 
 
 ingress:
-  enabled: false
+  enabled: true
   hosts:
     - name: "sonarqube.sdp.com"
       path: /

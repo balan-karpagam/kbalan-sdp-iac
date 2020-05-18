@@ -26,7 +26,7 @@ The following table lists the configurable parameters of the Sonarqube chart and
 | `securityContext.fsGroup`                   | Group applied to mounted directories/files|  `999`                                     |
 | `securityContext.runAsUser`                   | userid to run sonarqube server as |  `999`                                     |
 | `securityContext.runAsGroup`                   | groupid to run sonarqube server as |  `999`                                     |
-| `ingress.enabled`                           | Flag for enabling ingress                 | false                                      |
+| `ingress.enabled`                           | Flag for enabling ingress                 | true                                      |
 | `ingress.labels`                            | Ingress additional labels                 | `{}`                                       |
 | `ingress.hosts[0].name`                     | Hostname to your SonarQube installation   | `sonar.sdp.com`                   |
 | `ingress.hosts[0].path`                     | Path within the URL structure             | /                                          |

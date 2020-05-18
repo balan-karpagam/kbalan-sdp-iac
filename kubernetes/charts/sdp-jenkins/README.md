@@ -120,7 +120,7 @@ The following tables list the configurable parameters of the Jenkins chart and t
 | `master.overwriteConfig`          | Replace init scripts and config w/ ConfigMap on boot  | `false`                  |
 | `master.overwriteJobs`            | Replace jobs w/ ConfigMap on boot    | `false`                                   |
 | `master.affinity`                 | Affinity settings                    | `{}`                                      |
-| `master.ingress.enabled`          | Enables ingress                      | `false`                                   |
+| `master.ingress.enabled`          | Enables ingress                      | `true`                                   |
 | `master.ingress.apiVersion`       | Ingress API version                  | `extensions/v1beta1`                      |
 | `master.ingress.hostName`         | Ingress host name                    | sdp.jenkins.com                                   |
 | `master.ingress.annotations`      | Ingress annotations                  | `{}`                                      |
@@ -133,7 +133,7 @@ The following tables list the configurable parameters of the Jenkins chart and t
 | `master.backendconfig.annotations` | backendconfig annotations | `{}`                 |
 | `master.backendconfig.labels`      | backendconfig labels      | `{}`                 |
 | `master.backendconfig.spec`        | backendconfig spec        | `{}`                 |
-| `master.route.enabled`            | Enables openshift route              | `true`                                   |
+| `master.route.enabled`            | Enables openshift route              | `false`                                   |
 | `master.route.annotations`        | Route annotations                    | `{}`                                      |
 | `master.route.labels`             | Route labels                         | `{}`                                      |
 | `master.route.path`               | Route path                           | sdp.jenkins.com                                   |
