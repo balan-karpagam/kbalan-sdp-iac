@@ -1,6 +1,8 @@
 replicaCount: 1
 username: "sonar"
 password: "CHANGEME" 
+# A patch is needed if using upstrem docker sonarqube 6.7 which is not built to run as nonroot
+patch: true
 image:
   repository: "sonarqube"
   tag: "6.7"
@@ -32,13 +34,13 @@ route:
   enabled: true
   labels: {}
   annotations: {}
-  path: "sonarqube-test.medusa.af.mil"
+  path: "sonarqube.sdp.com"
 
 
 ingress:
   enabled: false
   hosts:
-    - name: "sonarqube-test.medusa.af.mil"
+    - name: "sonarqube.sdp.com"
       path: /
       # path: /sonarqube
   annotations: {}

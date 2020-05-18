@@ -261,7 +261,7 @@ master:
         unclassified:
           location:
             adminAddress: "address not configured yet <nobody@nowhere>"
-            url: "http://jenkins.iac-testing.svc:8080/"
+            url: "http://jenkins.default.svc:8080/"
           pollSCM:
             pollingThreadCount: 10
       sdp-security-config: |
@@ -284,7 +284,7 @@ master:
       resources:
       sshTcpPort: 1044
       folder: "/var/jenkins_home/casc_configs"
-      searchNamespace: "iac-testing"
+#      searchNamespace: "custom-namespace"
     other:
   nodeSelector: {}
   tolerations: []
@@ -318,7 +318,7 @@ master:
     enabled: true
     labels: {}
     annotations: {}
-    path: "jenkins-test.medusa.af.mil"
+    path: "jenkins.sdp.com"
 
   psp:
     enabled: false
@@ -336,8 +336,8 @@ master:
 
 agent:
   enabled: true
-  image: "docker-registry.default.svc:5000/default/jenkins-agent-ssl-ubi7-3.19"
-  tag: "latest"
+  image: "docker.pkg.github.com/boozallen/sdp-images/jenkins-agent"
+  tag: "ubi-1.0"
   imagePullPolicy: "IfNotPresent"
   customJenkinsLabels: []
   imagePullSecretName: "github"
@@ -351,7 +351,6 @@ agent:
       cpu: "1"
       memory: "512Mi"
   nodeSelector: {}
-  masterNamespace: "iac-testing"
 
 
 persistence:
